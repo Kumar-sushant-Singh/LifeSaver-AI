@@ -7,7 +7,10 @@
 ---
 
 ## 🚀 Live Demo
-[Deployed on Google Cloud Run] → *(Add your URL here after deployment)*
+
+**Live Application:** https://your-vercel-url.vercel.app
+
+*(Replace with your actual Vercel deployment URL.)*
 
 ---
 
@@ -42,15 +45,14 @@ LifeSaver AI goes beyond traditional reminders. It uses **Gemini AI** to:
 
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
 - **AI:** Gemini API (Google AI Studio)
-- **Deployment:** Google Cloud Run
+- **Deployment:** Vercel (Frontend + Serverless Functions)
 - **Storage:** Browser LocalStorage (offline-first)
 
 ## 🌐 Google Technologies
 
-- **Google Cloud Run** — Serverless container deployment
-- **Google AI Studio** — Gemini API integration
-- **Firebase** — Optional real-time database (extendable)
-- **Google Calendar API** — Ready for integration
+- Google AI Studio (Gemini API)
+- Gemini 2.5 Flash
+- Secure API integration using Vercel Serverless Functions
 
 ---
 
@@ -58,51 +60,27 @@ LifeSaver AI goes beyond traditional reminders. It uses **Gemini AI** to:
 
 ```
 lifesaver-ai/
-├── index.html          # Main application (single-file app)
-├── Dockerfile          # Container configuration for Cloud Run
-├── README.md           # This file
-└── docs/
-    └── project-description.md
+│
+├── index.html
+├── api/
+│   └── chat.js
+├── README.md
+└── project-description.md
 ```
 
 ---
 
-## 🚢 Deployment (Google Cloud Run)
+## 🚀 Deployment
 
-### Step 1: Create Dockerfile
-```dockerfile
-FROM nginx:alpine
-COPY index.html /usr/share/nginx/html/index.html
-EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"]
-```
-
-### Step 2: Build and Deploy
-```bash
-# Set your project
-gcloud config set project YOUR_PROJECT_ID
-
-# Build the container
-gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/lifesaver-ai
-
-# Deploy to Cloud Run
-gcloud run deploy lifesaver-ai \
-  --image gcr.io/YOUR_PROJECT_ID/lifesaver-ai \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated \
-  --port 8080
-```
-
-### Step 3: Get Your URL
-Cloud Run will output a URL like:
-`https://lifesaver-ai-xxxx-uc.a.run.app`
+The application is deployed on **Vercel** using Serverless Functions for secure AI integration.
 
 ---
 
 ## 🏃 Run Locally
 
-Just open `index.html` in any browser — no server required!
+Run the project locally using a local development server (such as Live Server in VS Code) or deploy it on Vercel.
+
+Configure the `GEMINI_API_KEY` environment variable in Vercel to enable AI-powered features.
 
 ```bash
 # Or serve with Python
@@ -121,7 +99,7 @@ npx serve .
 | Problem Solving & Impact (20%) | Directly solves deadline-missing with AI prioritization |
 | Agentic Depth (20%) | AI autonomously analyzes, prioritizes, and advises |
 | Innovation & Creativity (20%) | Context-aware AI coach + focus timer integration |
-| Usage of Google Technologies (15%) | Gemini AI + Google Cloud Run |
+| Usage of Google Technologies (15%) | Gemini AI (Google AI Studio) + Secure API Integration |
 | Product Experience & Design (10%) | Dark-mode UI, responsive, smooth animations |
 | Technical Implementation (10%) | Clean single-file architecture, error handling |
 | Completeness & Usability (5%) | Fully functional, deployed, documented |
