@@ -8,9 +8,8 @@
 
 ## 🚀 Live Demo
 
-**Live Application:** https://your-vercel-url.vercel.app
+**Live Application:** <https://life-saver-ai-nine.vercel.app/>
 
-*(Replace with your actual Vercel deployment URL.)*
 
 ---
 
@@ -50,9 +49,9 @@ LifeSaver AI goes beyond traditional reminders. It uses **Gemini AI** to:
 
 ## 🌐 Google Technologies
 
-- Google AI Studio (Gemini API)
-- Gemini 2.5 Flash
-- Secure API integration using Vercel Serverless Functions
+- **Google AI Studio** – Used to generate and manage the Gemini API key.
+- **Gemini 2.5 Flash** – Powers AI chat, task prioritization, deadline risk analysis, and productivity insights.
+- **Secure API Integration** – Gemini requests are processed securely through Vercel Serverless Functions, ensuring the API key is never exposed to users.
 
 ---
 
@@ -64,6 +63,7 @@ lifesaver-ai/
 ├── index.html
 ├── api/
 │   └── chat.js
+├── Dockerfile
 ├── README.md
 └── project-description.md
 ```
