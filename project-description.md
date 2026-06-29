@@ -12,7 +12,7 @@
 
 LifeSaver AI is a real-time, AI-powered productivity web application that transforms how people manage their tasks and deadlines. Unlike traditional reminder apps that passively notify users, LifeSaver AI acts as an intelligent coach — understanding your workload, autonomously prioritizing your tasks, and giving you personalized, context-aware advice through a conversational AI interface.
 
-The application runs entirely in the browser with no installation required. It is designed for deployment on Google Cloud Run using Docker and can also be deployed on modern web hosting platforms for easy access.
+The application runs entirely in the browser with no installation required and is deployed on Vercel using Serverless Functions. Google Gemini API powers AI chat, task prioritization, productivity insights, and smart recommendations through a secure backend powered by Vercel Serverless Functions.
 
 ---
 
@@ -31,24 +31,23 @@ The application runs entirely in the browser with no installation required. It i
 
 ### Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| HTML5 / CSS3 / JavaScript | Frontend application |
-| Gemini API | AI reasoning, chat, insights, suggestions |
-| Google Cloud Run | Serverless deployment |
-| Docker | Containerization |
+| Technology                | Purpose                                                             |
+| ------------------------- | ------------------------------------------------------------------- |
+| HTML5 / CSS3 / JavaScript | Frontend application                                                |
+| Google Gemini API         | AI chat, task prioritization, task breakdown, productivity insights |
+| Vercel                    | Hosting and Serverless Functions                                    |
+| Browser LocalStorage      | Local task storage                                                  |
+
 
 ---
 
 ### Google Technologies Utilized
 
-1. **Google AI Studio / Gemini API** — Core AI intelligence for task prioritization, conversational coaching, insight generation, and smart suggestions. The app makes direct API calls to Gemini for every AI-powered feature.
+1. **Google AI Studio / Gemini API** — Powers the conversational AI assistant, task prioritization, AI task breakdown, productivity insights, and schedule generation.
 
-2. **Google Cloud Run** — The application includes a Dockerfile and is designed for deployment on Google Cloud Run, enabling scalable serverless hosting.
+2. **Gemini 2.5 Flash** — Provides fast, real-time responses for all AI-powered productivity features while maintaining a responsive user experience.
 
-3. **Docker** — The project includes Docker support, making it ready for containerized deployment on Google Cloud Run or other cloud platforms.
-
-4. **Firebase (Architecture Ready)** — The application architecture is designed to integrate Firebase Firestore for cross-device task syncing and Firebase Auth for user accounts as a natural next step.
+3. **Secure API Integration** — Gemini API requests are securely handled through Vercel Serverless Functions, ensuring the API key remains protected and is never exposed to users.
 
 ---
 
@@ -70,5 +69,5 @@ Students, professionals, and entrepreneurs lose significant time and opportuniti
 - Creating accountability through visual deadline tracking
 - Making productivity advice personalized, not generic
 
-LifeSaver AI is designed as a scalable productivity solution that demonstrates how AI can proactively help users plan, prioritize, and complete tasks before deadlines. The architecture is deployment-ready and can be extended with cloud services for large-scale use.
+LifeSaver AI demonstrates how generative AI can proactively assist users in planning, prioritizing, and completing tasks before deadlines are missed. By combining intelligent scheduling, AI-powered guidance, and real-time productivity insights, the application helps users make better decisions and stay on track. The architecture is designed to support future enhancements such as calendar synchronization, cloud storage, and user authentication.
 
